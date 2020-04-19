@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool paused = false;
-
     public GameObject pauseMenu;
 
     private void Start()
@@ -18,8 +16,13 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(value);
     }
 
+    public void Resume()
+    {
+        InGameMenus.instance.SetUIMenu(InGameMenuType.Pause, false);
+    }
+
     public void ExitToMainMenu()
     {
-
+        Application.Quit();
     }
 }

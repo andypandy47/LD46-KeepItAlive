@@ -30,4 +30,9 @@ public class MusicManager : MonoBehaviour
     {
         musicEventInstance.setParameterByName("MusicState", value);
     }
+
+    public void SetPause(bool value)
+    {
+        musicEventInstance.setPaused(value);
+    }
 }

@@ -35,7 +35,9 @@ public class InGameMenus : MonoBehaviour
         switch(menuType)
         {
             case InGameMenuType.Pause:
+                MusicManager.instance.SetPause(isOpen);
                 pauseMenu.SetPauseDisplay(isOpen);
+                TogglePause();
                 break;
             case InGameMenuType.Win:
                 TogglePause();

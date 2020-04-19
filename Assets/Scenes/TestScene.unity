@@ -759,18 +759,7 @@ MonoBehaviour:
         m_CallState: 2
   onPauseDown:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1545626611}
-        m_MethodName: TogglePause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &844866403
 Transform:
   m_ObjectHideFlags: 0
@@ -1576,7 +1565,7 @@ PrefabInstance:
     - target: {fileID: 813915312696723013, guid: e7e90db55660d764b9126223ded832c2,
         type: 3}
       propertyPath: attackDistance.x
-      value: 0.3
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 813915312696723013, guid: e7e90db55660d764b9126223ded832c2,
         type: 3}
@@ -1616,7 +1605,7 @@ PrefabInstance:
     - target: {fileID: 813915312696723014, guid: e7e90db55660d764b9126223ded832c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.49
+      value: -2.527
       objectReference: {fileID: 0}
     - target: {fileID: 813915312696723014, guid: e7e90db55660d764b9126223ded832c2,
         type: 3}
@@ -1894,6 +1883,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1054120033183598208, guid: ee7adcd10ec0f5941b6f915388ef6cf1,
+        type: 3}
+      propertyPath: m_AnimationTriggers.m_SelectedTrigger
+      value: Selected
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054120033183598211, guid: ee7adcd10ec0f5941b6f915388ef6cf1,
+        type: 3}
+      propertyPath: m_Name
+      value: ExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054120033324885056, guid: ee7adcd10ec0f5941b6f915388ef6cf1,
+        type: 3}
+      propertyPath: m_text
+      value: Exit Game
+      objectReference: {fileID: 0}
     - target: {fileID: 1054120033726737636, guid: ee7adcd10ec0f5941b6f915388ef6cf1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1917,12 +1921,17 @@ PrefabInstance:
     - target: {fileID: 1054120033726737636, guid: ee7adcd10ec0f5941b6f915388ef6cf1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TogglePause
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 1054120033726737636, guid: ee7adcd10ec0f5941b6f915388ef6cf1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054120033726737636, guid: ee7adcd10ec0f5941b6f915388ef6cf1,
+        type: 3}
+      propertyPath: m_AnimationTriggers.m_SelectedTrigger
+      value: Selected
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee7adcd10ec0f5941b6f915388ef6cf1, type: 3}
@@ -2686,6 +2695,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1545626608}
+    - target: {fileID: 390154012628698274, guid: 19278a75ef57a49418be6e6f00044a4d,
+        type: 3}
+      propertyPath: m_Name
+      value: ExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 390154012757239393, guid: 19278a75ef57a49418be6e6f00044a4d,
+        type: 3}
+      propertyPath: m_text
+      value: Exit Game
+      objectReference: {fileID: 0}
     - target: {fileID: 5466054784461707149, guid: 19278a75ef57a49418be6e6f00044a4d,
         type: 3}
       propertyPath: m_AnchoredPosition.y

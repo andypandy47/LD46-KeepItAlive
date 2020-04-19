@@ -24,7 +24,7 @@ namespace Enemy
 
             float a = angle * Mathf.Deg2Rad;
 
-            if (distance < 5.0f)
+            if (distance < 8.0f)
             {
                 return 20.0f * direction.normalized;
             }

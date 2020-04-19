@@ -62,40 +62,37 @@ namespace Player
         public void OnJumpInputDown()
         {
 
-            if (controller.collisions.below)
+            if (PlayerStateManager.instance.currentState != State.Sliding)
             {
-                if (PlayerStateManager.instance.currentState != State.Sliding)
+                float slideDirection = directionalInput.x;
+                if (directionalInput.x == 0)
                 {
-                    float slideDirection = directionalInput.x;
-                    if (directionalInput.x == 0)
-                    {
-                        slideDirection = PlayerAnimation.facingRight ? 1.0f : -1.0f;    
-                    }
-
-                    transform.DOMoveX(transform.position.x + slideDistance * slideDirection, 0.5f)
-                    .SetEase(Ease.OutExpo)
-                    .OnComplete(() =>
-                    {
-                        PlayerStateManager.instance.SetCurrentState(StateMachine.States.IdlingState.Instance);
-                    });
-
-                    PlayerStateManager.instance.SetCurrentState(StateMachine.States.SlidingState.Instance);
-                    FMODUnity.RuntimeManager.PlayOneShot(SfxManager.instance.dodgeWhoosh, transform.position);
+                    slideDirection = PlayerAnimation.facingRight ? 1.0f : -1.0f;
                 }
-                //else
-                //{
-                //    PlayerStateManager.instance.SetCurrentState(StateMachine.States.JumpingState.Instance);
-                //    velocity.y = maxJumpVelocity;
-                //}
+
+                transform.DOMoveX(transform.position.x + slideDistance * slideDirection, 0.5f)
+                .SetEase(Ease.OutExpo)
+                .OnComplete(() =>
+                {
+                    PlayerStateManager.instance.SetCurrentState(StateMachine.States.IdlingState.Instance);
+                });
+
+                PlayerStateManager.instance.SetCurrentState(StateMachine.States.SlidingState.Instance);
+                FMODUnity.RuntimeManager.PlayOneShot(SfxManager.instance.dodgeWhoosh, transform.position);
             }
+            //else
+            //{
+            //    PlayerStateManager.instance.SetCurrentState(StateMachine.States.JumpingState.Instance);
+            //    velocity.y = maxJumpVelocity;
+            //}
         }
 
         public void OnJumpInputUp()
         {
-            if (velocity.y > minJumpVelocity)
-            {
-                velocity.y = minJumpVelocity;
-            }
+            //if (velocity.y > minJumpVelocity)
+            //{
+            //    velocity.y = minJumpVelocity;
+            //}
         }
 
         private void CalculateVelocity()
@@ -105,15 +102,14 @@ namespace Player
             targetVelocityX = directionalInput.x * currentMoveSpeed * Time.deltaTime;
 
             velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, accelerationTime);
-            velocity.y += gravity * Time.deltaTime;
+           // velocity.y += gravity * Time.deltaTime;
         }
 
         public void Attack()
         {
-            if (controller.collisions.below)
-            {
-                velocity.x = PlayerAnimation.facingRight ? attackDistance.x : -attackDistance.x;
-            }
+            // velocity.x = PlayerAnimation.facingRight ? attackDistance.x : -attackDistance.x;
+            float attackDist = PlayerAnimation.facingRight ? transform.position.x + attackDistance.x : transform.position.x - attackDistance.x;
+            transform.DOMoveX(attackDist, 0.1f).SetEase(Ease.Linear);
         }
     }
 }

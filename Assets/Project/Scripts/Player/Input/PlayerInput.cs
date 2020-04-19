@@ -42,7 +42,7 @@ namespace Player
 
                 if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
                 {
-                    onPauseDown.Invoke();
+                    InGameMenus.instance.SetUIMenu(InGameMenuType.Pause, !InGameMenus.paused);
                 }
             }
         }
