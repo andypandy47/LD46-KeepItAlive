@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d554fb87-730b-4cd9-899b-8929012f06c5}">
+		<property name="assetPath">
+			<value>Guitar_Fail_02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.6908163265306122</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{21051b68-d92e-4d08-a44a-9b469717c4e0}</destination>
+		</relationship>
+	</object>
+</objects>

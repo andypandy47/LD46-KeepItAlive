@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{69218f9c-3de2-4819-996d-10b0092b4000}">
+		<property name="assetPath">
+			<value>HornsFall_01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.5263265306122449</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{21051b68-d92e-4d08-a44a-9b469717c4e0}</destination>
+		</relationship>
+	</object>
+</objects>
